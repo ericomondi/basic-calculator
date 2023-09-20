@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .container_div {
+        position: relative;
+        width: 100%;
+        height: 600px;
+      }
+      .form_div {
+        position: absolute;
+        height: 300px;
+        width: 260px;
+        left: 32%;
+        top: 15%;
+      }
+
+      input[name="output"] {
+        height: 30px;
+        width: 256px;
+        background-color: rgba(245, 235, 235, 0.911);
+        color: black;
+      }
+      input[value="CLEAR ALL"] {
+        height: 30px;
+        width: 256px;
+        background-color: red;
+      }
+      input {
+        width: 58px;
+        height: 35px;
+        margin-left: -4px;
+        background-color: blue;
+        color: white;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container_div">
+      <div class="form_div">
+        <!-- The form -->
+        <form name="calc_form">
+          <!-- The input box will show the button pressed -->
+          <input type="text" name="output" /> <br />
+          <br />
+          <!-- Calculator buttons -->
+          <!-- the onclicl() function display the value
+         of the button pressed -->
+          <input
+            type="text"
+            value="9"
+            onclick="calc_form.output.value += '9'"
+          />
+          <input
+            type="text"
+            value="8"
+            onclick="calc_form.output.value += '8'"
+          />
+          <input
+            type="text"
+            value="7"
+            onclick="calc_form.output.value += '7'"
+          />
+          <input
+            type="text"
+            value="+"
+            onclick="calc_form.output.value += '+'"
+          />
+          <br />
+          <input
+            type="text"
+            value="5"
+            onclick="calc_form.output.value += '5'"
+          />
+          <input
+            type="text"
+            value="4"
+            onclick="calc_form.output.value += '4'"
+          />
+          <input
+            type="text"
+            value="6"
+            onclick="calc_form.output.value += '6'"
+          />
+          <input
+            type="text"
+            value="-"
+            onclick="calc_form.output.value += '-'"
+          />
+
+          <br />
+          <input
+            type="text"
+            value="3"
+            onclick="calc_form.output.value += '3'"
+          />
+          <input
+            type="text"
+            value="2"
+            onclick="calc_form.output.value += '2'"
+          />
+          <input
+            type="text"
+            value="1"
+            onclick="calc_form.output.value += '1'"
+          />
+          <input
+            type="text"
+            value="*"
+            onclick="calc_form.output.value += '*'"
+          />
+          <br />
+          <input
+            type="text"
+            value="/"
+            onclick="calc_form.output.value += '/'"
+          />
+          <input
+            type="text"
+            value="0"
+            onclick="calc_form.output.value += '0'"
+          />
+          <input
+            type="text"
+            value="."
+            onclick="calc_form.output.value += '.'"
+          />
+
+          <!-- when we click the "=" button the onclick displays the results on the calc -->
+          <input
+            type="text"
+            value="="
+            onclick="calc_form.output.value = eval(calc_form.output.value)"
+          />
+          <br />
+          <input
+            type="text"
+            value="CLEAR ALL"
+            onclick="calc_form.output.value = ''"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
